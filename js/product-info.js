@@ -8,27 +8,51 @@ var category5 = {};
 
 var ShowSelected= undefined;
 
-function showImagesGallery(array)
+
+function showImagesGallery(array) 
 {
+    let htmlContentToAppend = "";
+    let imgHTML = `
 	
-	let htmlContentToAppend = "";
+    <div class="carousel-item active">
+    <img id="active-carousel-img" class="d-block w-100  zoom" src="`+ array[0] +`" alt="Slide `+ 1 +`">
+    </div>
+    `;
 	
-	for(let i = 0; i < array.length; i++)
+    let carouselExampleIndicatorsHTML = `
+	<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    `;
+    
+    for (let i = 1; i < array.length; i++) 
 	{
-		let img = array[i];
+        let img = array[i];
 		
-		htmlContentToAppend += `
-		
-		<div class="col-lg-3 col-md-4 col-6">
-		<div class="d-block mb-4 h-100">
-		<img class="img-fluid img-thumbnail" src="` + img +`" alt="">
+        imgHTML += `
+		<div class="carousel-item zoom" >
+		<img class="d-block w-100" src="`+ img +`" alt="Slide `+ i +`">
 		</div>
-		</div>
+        `;
 		
-		`
-		
-		document.getElementById("productImagesGallery").innerHTML = htmlContentToAppend;//"productImagesGallery" nombre id html
+        carouselExampleIndicatorsHTML += `
+		<li data-target="#carouselExampleIndicators" data-slide-to="`+ i +`"></li>`;
 	}
+	
+	htmlContentToAppend +=`
+	<div id="prod-info-carousel" class="carousel slide" data-ride="carousel">
+	<ol class="carousel-indicators">`+ carouselExampleIndicatorsHTML +`</ol>
+	<div class="carousel-inner">`+ imgHTML +`</div>
+	<a class="carousel-control-prev" href="#prod-info-carousel" role="button" data-slide="prev">
+	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	<span class="sr-only">Previous</span></a>
+	<a class="carousel-control-next" href="#prod-info-carousel" role="button" data-slide="next">
+	<span class="carousel-control-next-icon" aria-hidden="true"></span>
+	<span class="sr-only">Next</span>
+	</a>
+	</div>
+	`;
+	
+	document.getElementById("productImagesGallery").innerHTML = htmlContentToAppend;//"productImagesGallery" nombre id html
+	
 }
 
 
@@ -48,25 +72,29 @@ function showComentarios(array)
 		//funcion para agregar las puntuaciones en formato estrella
 		function agregar3()
 		{
-			if(star == 1)
+			if(star == 1 )
 			{ 
 				document.getElementById("idscore").innerHTML =(htmlContentToAppend += `Calificación:  <span class="fa fa-star checked"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span>`)
 				
 			}
-			if(star == 2)
+			
+			else if(star == 2 )
 			{ 
 				document.getElementById("idscore").innerHTML =(htmlContentToAppend += `Calificación:  <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span>`)
 				
 			}
-			if(star == 3)
+			
+			else if(star == 3 )
 			{ 
 				document.getElementById("idscore").innerHTML =(htmlContentToAppend += `Calificación:  <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span>`)
 				
 			}
+			
 			else if(star == 4)
 			{ 
 				document.getElementById("idscore").innerHTML =(htmlContentToAppend += `Calificación:  <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span> `)
 			}
+			
 			else if(star == 5)
 			{ 
 				document.getElementById("idscore").innerHTML =(htmlContentToAppend += `Calificación:  <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> `)
@@ -80,8 +108,8 @@ function showComentarios(array)
 		<div class="co2"><p ="pPuntosComentario">
 		<h6 class="mb-1">`+  com.description+'  '+`</h6> </p></div>
 		
-		<p class="pDatosComentario">
-		<h6><small class="text-muted">` +' Usuario: '+ com.user + `</small></h6>
+		<p class="pDatosComentario " >
+		<h6><small class="text-muted ">` +' Usuario: '+ com.user + `</small></h6>
 		<h6><small class="text-muted">` +' Fecha de publicación: '+ com.dateTime + `</small></h6>
 		</p>	`	
 		agregar3();`
@@ -116,14 +144,14 @@ document.addEventListener("DOMContentLoaded", function(e)
 					let productCountHTML = document.getElementById("productCount");
 					let productCriteriaHTML = document.getElementById("productCriteria");
 					let productPHTML = document.getElementById("productP");
-					let relPHTML = document.getElementById("relacionados");
+					//let relPHTML = document.getElementById("relacionados");
 					
 					categoryNameHTML.innerHTML = category2.name;
 					categoryDescriptionHTML.innerHTML = category2.description;
 					productCountHTML.innerHTML = category2.soldCount;
 					productCriteriaHTML.innerHTML = category2.category;
 					productPHTML.innerHTML = category2.currency + " " +category2.cost;
-					relPHTML.innerHTML = category2.relatedProducts;
+					//relPHTML.innerHTML = category2.relatedProducts;
 					
 					//Muestro las imagenes en forma de galería
 					showImagesGallery(category2.images);
@@ -186,7 +214,7 @@ document.addEventListener("DOMContentLoaded", function(e)
             `
 			document.getElementById("relacionados").innerHTML = htmlContentToAppend;
 		}
-		
+		var estrComm= undefined;
 		
 		function alertas()
 		{
@@ -194,7 +222,7 @@ document.addEventListener("DOMContentLoaded", function(e)
 			var val = $.trim($("textarea").val());//guardo lo que el usuario introduce txt
 			//var val1Estrella = $("idselect").val();//guardo lo que el usuario introduce txt
 			var e = document.getElementById("idselect");
-			var estrComm = e.options[e.selectedIndex].text;
+			estrComm = e.options[e.selectedIndex].text;
 			//alert("val de *" +estrComm);
 			var usuEmailComment = localStorage.getItem("usuario");//traigo el mail del usuario del local storage y lo almaceno el la variable
 			var today = new Date();//creo nuevo objeto tipo fecha
@@ -215,31 +243,66 @@ document.addEventListener("DOMContentLoaded", function(e)
 					alert("Sorry, your browser does not support Web Storage...");//si el browser no lo soporta envia esta alerta de error
 				}				
 			} 
+			function agregar4()
+			{  
+				switch (estrComm) 
+				{
+					case 1:
+					//Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor1
+					//document.getElementById("idscoreestrComm").innerHTML =(htmlContentToAppend += `Calificación:  <span class="fa fa-star checked"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span>`)
+					document.getElementById("idscoreestrComm").innerHTML = (bloque += `Calificación:  <span class="fa fa-star checked"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span>`)
+					break;
+					case 2:
+					//Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor2
+					document.getElementById("idscoreestrComm").innerHTML =(bloque += `Calificación:  <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span>`)
+					break;
+					case 3:
+					//Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor2
+					document.getElementById("idscoreestrComm").innerHTML =(bloque+= `Calificación:  <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span>`)
+					break;
+					case 4:
+					//Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor2
+					document.getElementById("idscoreestrComm").innerHTML =(bloque += `Calificación:  <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span>`)
+					break;
+					case 5:
+					//Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor2
+					document.getElementById("idscoreestrComm").innerHTML =(bloque += `Calificación:  <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span>`)
+					break;
+					default:
+					//Declaraciones ejecutadas cuando ninguno de los valores coincide con el valor de la expresión
+					//alert("el valor no es valido");
+					break;
+				}
+				
+			}
+			
+			
 			let bloque ="";
 			bloque += `
-		<div class="list-group-item list-group-item-action"><div class="col-lg-3 col-md-4 col-6">
-		<div class="d-block mb-4 h-100">`+
-			((document.getElementById("usuarioComment").innerHTML= val)+
-			(document.getElementById("usuarioCommentTime").innerHTML="Fecha de publicacion: " +dateTime)+
-			(document.getElementById("usuarioCommentEmail").innerHTML= "Usuario: " +usuEmailComment)+	
-			(document.getElementById("usuarioEstrella").innerHTML= "Calificación: " +estrComm))
-			+ `            
-            </div> 
-			</div> 
-            `
-			
-		}
+			<div class=" list-group-item list-group-item-action">
+			<div class="divusua col-lg-3 col-md-4 col-6"> <img src="img/user.png" width="55" height="55"> </div>
+			<div class="d-block mb-4 h-100 co2 ">  <p ="pPuntosComentarios"> <h6 class="mb-1"> `+ val + `</h6> </p>  </div>		
+			<p class="pDatosComentarios" >  <h6><small >  Usuario:` +usuEmailComment + `</small> 
+			 <h6><small class="text-muted"> Fecha de publicacion: ` + dateTime + `</h6></small></p>
+			<div id="idscoreestrComm"> Calificación:` + estrComm +`</div> 
 		
-		
-		document.addEventListener("DOMContentLoaded", function(e){
-			getJSONData3(PRODUCTS_URL).then(function(resultObj){
-				if (resultObj.status === "ok")
-				{
-					currentRelatedArray = resultObj.data;
-					showRelacionados(currentRelatedArray);
-				}
-			});
+			</div>
+			`
+			agregar4();
+			document.getElementById("usuarioComment").innerHTML= bloque;
+			
+			}
 			
 			
-		});
+			document.addEventListener("DOMContentLoaded", function(e){
+				getJSONData3(PRODUCTS_URL).then(function(resultObj){
+					if (resultObj.status === "ok")
+					{
+						currentRelatedArray = resultObj.data;
+						showRelacionados(currentRelatedArray);
+					}
+				});
 				
+			
+			});
+						

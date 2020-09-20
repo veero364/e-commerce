@@ -2178,6 +2178,13 @@ div.divusu
 	left: 30px;
 	
 }
+div.divusua
+{
+	position: absolute;
+	left: 20px;
+	right: -5px;
+	
+}
 div.co2
 {
 	position: relative;
@@ -2195,6 +2202,18 @@ p.pPuntosComentario
 	position: absolute;
 	
 }
+p.pPuntosComentarios
+{
+	position: relative;
+	margin-left: 40px;
+	
+}
+p.pDatosComentarios
+{
+		position: relative;
+	left: 30px;
+	margin-top: 40px;
+}
 a.custom-card,
 a.custom-card:hover 
 {
@@ -2202,11 +2221,25 @@ a.custom-card:hover
 	text-decoration: inherit;
 }
 
+
+
 .checked 
 {
 	color: orange;
 }
+h3.categoryName
+{ text-align: center;}
 
+div.estilopag
+{ text-align: left;}
+
+div.divImgCarrusel
+{
+		position: relative;
+	left: 40px;
+	margin-top: 50px;
+	
+}
 /*
 	.comentariosjson.score
 	{

@@ -11,7 +11,7 @@
 		
 		
 		
-		<style type="text/css" media="all">@import "https://asset-cdn.schoology.com/assets/css/theme_bundle_995a1ca4c022a1fcc9f4bd84130c5798.css";</style>
+		<!--<style type="text/css" media="all">@import "https://asset-cdn.schoology.com/assets/css/theme_bundle_995a1ca4c022a1fcc9f4bd84130c5798.css";</style>-->
 		
 		
 		<link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
@@ -23,7 +23,7 @@
 		<!-- Libreria de iconos -estrellas- -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script src="js/userName.js"></script>
-				
+		
 		
 	</head>
 	
@@ -34,8 +34,23 @@
 				<a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
 				<a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
 				<a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-				<a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-				<div class="py-2 d-none d-md-inline-block" id="user" style="color: yellow">  </div>
+				<!-- <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+				<a class="py-2 d-none d-md-inline-block" href="cart.html">Mi Perfil</a>-->
+				
+				<div class="dropdown">
+					<button id="DPWperfil" class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false">
+						<div class="py-2 d-none d-md-inline-block" id="user" style="color: yellow">  </div>
+						
+					</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a  class="py-2 d-none d-md-inline-block dropdown-item"  href="cart.html">Ver mi carrito</a>
+						<a class="py-2 d-none d-md-inline-block dropdown-item" href="my-profile.html">Mi perfil</a>
+						<a class="py-2 d-none d-md-inline-block dropdown-item" href="index.html">Cerrar sesión</a>
+					</div>
+					
+				</div>
+				
 			</div>
 		</nav>
 		<main role="main">
@@ -46,9 +61,14 @@
 					<p class="small alert-warning py-3"><strong>Nota: </strong>por simplicidad, cualquiera sea el producto
 					seleccionado previamente, siempre se visualizará la presente: <strong>Chevrolet Onix Joy</strong>.</p>
 				</div>
-				<h3 id="categoryName"></h3>
+				<h3 id="categoryName" class="categoryName"></h3>
 				<hr class="my-3">
+				
+				
+				<div class="estilopag">
 				<dl>
+				<table>
+				<td class="estilohtml">
 					<dt>Categoría</dt>
 					<dd>
 						<p id="productCriteria"></p>
@@ -56,7 +76,7 @@
 					
 					<dt>Precio:</dt>
 					<dd>
-						<p id="productP"></p>
+						<p id="productP" ></p>
 					</dd>
 					
 					<dt>Cantidad vendidos</dt>
@@ -68,13 +88,22 @@
 					<dd>
 						<p id="categoryDescription"></p>
 					</dd>
-					
+				
+				</td>
+				
+				
+				<td>
+				<div class="divImgCarrusel">
 					<dt>Imágenes ilustrativas</dt>
 					<dd>
 						<div class="row text-center text-lg-left pt-2" id="productImagesGallery">
 						</div>
 					</dd>
+					</div>
+				</td>
+					</table>
 				</dl>
+				</div>
 				<!--    <a type="button" class="btn btn-light btn-lg btn-block" href="products.html">Ver productos</a> -->
 				<br>
 				<hr>
@@ -121,28 +150,29 @@
 								</span>
 								<br>
 							</div>
-
+							
 					</div>
 					<br>
 					<div id="usuarioComment" > </div>
 					<div id="usuarioCommentEmail"> </div>
 					<div id="usuarioCommentTime"> </div>					
-					<div id="usuarioEstrella"> </div>
+					<div id="usuarioEstrella" > </div>
+					<div id="idscoreestrComm"></div>
 					
-						
-					<div class="comentariosjson" id="idscore" >	
-					
-										
-					<div id="usuarioSelect"> </div>
-						<br>
-						<div id="comentarioAgregado">  </div>
-						<div id="score" >  </div>
-						<div id="description"></div>
-						<div id="user5"></div>
-						<div id="dateTime"></div>
-						
-					</div>	
-					
+				
+				<div class="comentariosjson" id="idscore" >	
+				
+				
+				<div id="usuarioSelect"> </div>
+				<br>
+				<div id="comentarioAgregado">  </div>
+				<div id="score" >  </div>
+				<div id="description"></div>
+				<div id="user5"></div>
+				<div id="dateTime"></div>
+				
+				</div>	
+				
 				</div>
 				<br>
 				<hr>
@@ -151,10 +181,10 @@
 				
 				<footer class="text-muted">
 				<div class="container">
-					<p class="float-right">
-						<a href="#">Volver arriba</a>
-					</p>
-					<p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
+				<p class="float-right">
+				<a href="#">Volver arriba</a>
+				</p>
+				<p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
 				
 				</div>
 				</footer>
@@ -170,7 +200,7 @@
 				<script src="js/bootstrap.bundle.min.js"></script>
 				<script src="js/init.js"></script>
 				<script src="js/product-info.js"></script>
-		
+				
 				</body>
 				
-				</html>														
+				</html>																										
