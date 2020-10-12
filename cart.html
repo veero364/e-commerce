@@ -11,24 +11,10 @@
 		
 		<link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
 		<link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script> <!--para que haga efecto acordion-->
+		
 		<link rel="icon" type="image/png" href="img/icons/favicon.ico"/>
 		<script src="js/userName.js"></script>
-		<style>
-			.bd-placeholder-img {
-			font-size: 1.125rem;
-			text-anchor: middle;
-			-webkit-user-select: none;
-			-moz-user-select: none;
-			-ms-user-select: none;
-			user-select: none;
-			}
-			
-			@media (min-width: 768px) {
-			.bd-placeholder-img-lg {
-			font-size: 3.5rem;
-			}
-			}
-		</style>
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/styles.css" rel="stylesheet">
 		<link href="css/dropzone.css" rel="stylesheet">
@@ -44,7 +30,11 @@
 				<a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
 				<!-- <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
 				<a class="py-2 d-none d-md-inline-block" href="cart.html">Mi Perfil</a>-->
-				<div class="py-2 d-none d-md-inline-block" id="user" style="color: yellow">  </div>				<div class="dropdown">
+				
+				
+				
+				
+				<div class="dropdown">
 					<button id="DPWperfil" class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown"
 					aria-haspopup="true" aria-expanded="false">
 						<div class="py-2 d-none d-md-inline-block" id="user" style="color: yellow">  </div>
@@ -56,16 +46,120 @@
 						<a class="py-2 d-none d-md-inline-block dropdown-item" href="index.html">Cerrar sesión</a>
 					</div>
 					
-				</div>/div>
-			</nav>
-			<div class="container p-5">
-				<div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-					<h4 class="alert-heading">¡A trabajar! :)</h4>
-					<p>Esta sección corresponde a: Entrega 5 (Fecha de entrega: 11/10/2020) y Entrega 6 (Fecha de entrega: 25/10/2020).</p>
-					<hr>
-				<p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
-			</div>
+				</div></div>
+		</nav>
+		<div class="tituloMoreGIF">
+			<h1><img src="img/carrito.gif" height="10%" width="20%" background="none"></img>Carrito de Compras...</h1>
 		</div>
+		<hr>
+		<div class="estilo1" id="aquiaqui">
+			
+			<div class="accordion estilo1">
+				<div class="accordion-item">
+					<div class="item-header">
+						<h1 class="title">Articulos a comprar</h1>
+						<div class="icon">+</div>
+					</div>
+					<div class="text" id="idArticulosAcomprar">
+						
+					</div>
+				</div>
+				<form id="f1" onsubmit="return false">
+				<div class="accordion-item">
+					<div class="item-header">
+						<h1 class="title">Datos del envío</h1>
+						<div class="icon">+</div>
+					</div>
+					<div class="text">
+						<div class="row">
+							<div class="col-md-6 mb-3">
+								<label for="productName">Direccion:</label>
+								<input type="text" class="form-control" id="productCalle" placeholder="Calle" value="" required>
+								<input type="text" class="form-control" id="productnum" placeholder="Número" value="" required>
+								<input type="text" class="form-control" id="productesquina" placeholder="Esquina" value="" required>
+								<div class="invalid-feedback">
+									Ingresa una direccion
+								</div>
+							</div>
+							<div class="col-md-6 mb-3">
+								<label for="productName">Pais:</label>
+								<input type="text" class="form-control" id="productPais" placeholder="País" value="" required>
+								
+								<div class="invalid-feedback">
+									Ingresa un Pais
+								</div>
+							</div>
+						</div>
+						<h1 class="title">Tipo de Envío</h1>
+						<div class="pricing-table">
+							<div class="col">
+								<div class="table">
+									<h2>Standard </h2>
+									<div class="price">5%</div>
+									
+									
+									<li> 	Sobre el total de su compra</li>
+									<li> 	Entrega de 12 a 15 días  </li>
+								</ul>
+								<a href="#costototal" onclick="CostoStandard();">Seleccionar Envío</a>
+							</div>
+							
+						</div>
+						
+						<div class="col">
+							<div class="table">
+								<h2>Express </h2>
+								<div class="price">7%</div>
+								
+								
+								<li> 	Sobre el total de su compra </li>
+								<li> 	Entrega de 5 a 8 días </li>
+							</ul>
+							<a href="#costototal" onclick="CostoExpress();"> Seleccionar Envío</a>
+						</div>
+					</div>
+					
+					<div class="col">
+						<div class="table">
+							<h2>Premium </h2>
+							<div class="pop">Popular</div>
+							<div class="price">15%</div>
+							
+							
+							<li> 	Sobre el total de su compra </li>
+							<li> 	Entrega de 2 a 5 días </li>
+						</ul>
+						<a href="#costototal" onclick="CostoPremium();" >Seleccionar Envío</a>
+					</div>
+				</div>
+			
+				
+				<input type="text" class="form-control" id="costoenvio" placeholder="" value=" " style="border: none; background-color: transparent;" >
+				</p>
+				<br>
+				<div>
+					<center> <h1 class="title" id="msg1" style="display: none">Costo total de la compra</h1></center>
+
+				 <br>
+				<p class="text" id="costototal" style="display: none">
+					Favor seleccione un tipo de envío
+				</p>
+				</div>
+				
+				
+			</div>
+			
+					<div id="metodos" style="display: none"></div>
+		<div id="myDIV"  style="display: none">
+		<p id="mensaje"></p>
+		</div>
+		<input type="submit" value="Comprar"  style="color:blue; height:35px; width:150px; font-size:12px;" onclick="myFunctionmostrar()">
+	<a href="products.html"><input type="button" value="Cancelar"  style="color:blue; height:35px; width:150px; font-size:12px;"></a>
+	<a href="products.html"><input type="button" value="Volver"  style="color:blue; height:35px; width:150px; font-size:12px;"></a>
+		
+		</form>
+		</div>
+
 		<div id="spinner-wrapper">
 			<div class="lds-ring">
 				<div></div>
@@ -74,11 +168,22 @@
 				<div></div>
 			</div>
 		</div>
-		<script src="js/jquery-3.4.1.min.js"></script>
-	<script src="js/bootstrap.bundle.min.js"></script>
-	<script src="js/dropzone.js"></script>
-	<script src="js/init.js"></script>
-	<script src="js/cart.js"></script>
-	</body>
-	
-	</html>	
+	</div>
+</div>
+<script type="text/javascript"> //para que haga efecto acordion
+	$(".item-header").click(function(){
+        $(".accordion-item").removeClass("active");
+        $(this).parent().addClass("active");
+        $(".icon").text("+");
+        $(this).children(".icon").text("-");
+	});
+</script>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/dropzone.js"></script>
+<script src="js/init.js"></script>
+<script src="js/cart.js"></script>
+</body>
+
+</html>	

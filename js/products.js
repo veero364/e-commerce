@@ -71,7 +71,7 @@ function showProductsList(currentCategoriesArray) { //MOSTRAR PRODUCTOS
 			
             htmlContentToAppend += `
 			<a href="product-info.html" class="list-group-item list-group-item-action">
-            <div class="list-group-item list-group-item-action">
+            <div class=" list-group-item-action">
 			<div class="row">
 			<div class="col-3">
 			<img src="` + category.imgSrc + `" alt="` + category.desc + `" class="img-thumbnail">
@@ -95,7 +95,7 @@ function showProductsList(currentCategoriesArray) { //MOSTRAR PRODUCTOS
 		document.getElementById("cat-list-container").innerHTML = htmlContentToAppend;
 		
 		
-	}
+		}
 }
 
 function sortAndShowCategories(sortCriteria, CategoriesArray){//ORDENAR Y MOSTRAR CATEGORIA

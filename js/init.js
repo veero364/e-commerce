@@ -5,7 +5,8 @@ const PRODUCTS_URL = "https://japdevdep.github.io/ecommerce-api/product/all.json
 const PRODUCT_INFO_URL = "https://japdevdep.github.io/ecommerce-api/product/5678.json";
 const PRODUCT_INFO_COMMENTS_URL = "https://japdevdep.github.io/ecommerce-api/product/5678-comments.json";//comentarios
 const CART_INFO_URL = "https://japdevdep.github.io/ecommerce-api/cart/987.json";
-const CART_BUY_URL = "https://japdevdep.github.io/ecommerce-api/cart/buy.json";
+const CART_INFO_URL2 = "https://japdevdep.github.io/ecommerce-api/cart/654.json";
+const CART_BUY_URL = "https://japdevdep.github.io/ecommerce-api/cart/buy.json";//mje de has comprado con exito
 
 var showSpinner = function () {
 	document.getElementById("spinner-wrapper").style.display = "block";
@@ -158,9 +159,73 @@ var getJSONData3 = function (url)
 													hideSpinner();
 													return result;
 												});}
-												//Función que se ejecuta una vez que se haya lanzado el evento de
-												//que el documento se encuentra cargado, es decir, se encuentran todos los
-												//elementos HTML presentes.
-												//document.addEventListener("DOMContentLoaded", function(e){
+												
+												var getJSONData6= function (url) 
+												{//SE CREA Y EN CATEGORY INFO SE MODIFICA EL NOMBRE DE LA VARIABLE GETJSDATA2
+													var result = {};
+													showSpinner();
+													return fetch(CART_INFO_URL)//se inserta otra url
+													.then(response => 
+														{
+															if (response.ok) 
+															{
+																return response.json();
+															} 
+															else 
+															{
+																throw Error(response.statusText);
+															}
+														})
+														.then(function (response) 
+															{
+																result.status = 'ok';
+																result.data = response;
+																hideSpinner();
+																return result;
+															})
+															.catch(function (error) 
+																{
+																	result.status = 'error';
+																	result.data = error;
+																	hideSpinner();
+																	return result;
+																});}
+																
+																var getJSONData7= function (url) 
+												{//SE CREA Y EN CATEGORY INFO SE MODIFICA EL NOMBRE DE LA VARIABLE GETJSDATA2
+													var result = {};
+													showSpinner();
+													return fetch(CART_BUY_URL)//se inserta otra url
+													.then(response => 
+														{
+															if (response.ok) 
+															{
+																return response.json();
+															} 
+															else 
+															{
+																throw Error(response.statusText);
+															}
+														})
+														.then(function (response) 
+															{
+																result.status = 'ok';
+																result.data = response;
+																hideSpinner();
+																return result;
+															})
+															.catch(function (error) 
+																{
+																	result.status = 'error';
+																	result.data = error;
+																	hideSpinner();
+																	return result;
+																});}
+																
+																
+																//Función que se ejecuta una vez que se haya lanzado el evento de
+																//que el documento se encuentra cargado, es decir, se encuentran todos los
+																//elementos HTML presentes.
+																//document.addEventListener("DOMContentLoaded", function(e){
 //});
 //prueba
