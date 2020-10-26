@@ -41,7 +41,7 @@
 	text-shadow: 1px 1px 2px grey;
 }
 /*input.botnPublicar{
-  {
+	{
     text-decoration: none;
     padding: 10px;
     font-weight: 600;
@@ -50,7 +50,7 @@
     background-color: #1883ba;
     border-radius: 6px;
     border: 2px solid #0016b0;
-  }
+	}
 }*/
 
 
@@ -2210,7 +2210,7 @@ p.pPuntosComentarios
 }
 p.pDatosComentarios
 {
-		position: relative;
+	position: relative;
 	left: 30px;
 	margin-top: 40px;
 }
@@ -2235,7 +2235,7 @@ div.estilopag
 
 div.divImgCarrusel
 {
-		position: relative;
+	position: relative;
 	left: 40px;
 	margin-top: 50px;
 	
@@ -2243,67 +2243,67 @@ div.divImgCarrusel
 /*----------ACORDION----------*/
 
 .accordion{
-  max-width: 700px;
-  padding: 20px;
+	max-width: 700px;
+	padding: 20px;
 }
 
 .accordion-item{
-  border-bottom: 1px solid #ddd;
-  padding: 20px 0;
+	border-bottom: 1px solid #ddd;
+	padding: 20px 0;
 }
 
 .item-header{
-  padding: 14px 6px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
+	padding: 14px 6px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
 }
 
 .title{
-  font-size: 20px;
-  font-weight: 600;
+	font-size: 20px;
+	font-weight: 600;
 }
 
 .icon{
-  width: 28px;
-  height: 28px;
-  border: 2px solid #000;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 25px;
+	width: 28px;
+	height: 28px;
+	border: 2px solid #000;
+	border-radius: 50%;
+	text-align: center;
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 25px;
 }
 
 .text{
-  color: #888;
-  padding: 0 6px;
-  max-height: 0;
-  overflow: hidden;
-  
+	color: #888;
+	padding: 0 6px;
+	max-height: 0;
+	overflow: hidden;
+	
 }
 
 .accordion-item.active .text{
-  max-height: 700px;
-  transition: .4s linear;
+	max-height: 700px;
+	transition: .4s linear;
 }
 .estilo1
 {
 	
-	  margin-left: 15%;
-  padding: 0;
-  font-family: "Open Sans",sans-serif;
-  box-sizing: border-box;
-
- 
+	margin-left: 15%;
+	padding: 0;
+	font-family: "Open Sans",sans-serif;
+	box-sizing: border-box;
+	
+	
 }
 .tituloMoreGIF
 {
-		  margin-left: 23%;
-  padding: 0;
-  font-family: "Open Sans",sans-serif;
-  box-sizing: border-box;
+	margin-left: 23%;
+	padding: 0;
+	font-family: "Open Sans",sans-serif;
+	box-sizing: border-box;
 	
 	
 }
@@ -2386,128 +2386,139 @@ div.divImgCarrusel
 	transition: 0.5s linear;
 	
 }
- .table a:hover
- {
- background: #2x3e50;
- color: #c80000;
-	 }
-	 
-	 .pop
-	 {
-		 background: #2c3e50;
-		 color: #fff;
-		 transform: rotate(45deg);
-		 padding: 7px 40px;
-		 position: absolute;
-		 top:16px;
-		 right: -40px;
-		 }
-		 
-		 @media screen and (max-width: 980px)
-		 {
-			 .col{flex: 50%;}
-			 }
+.table a:hover
+{
+	background: #2x3e50;
+	color: #c80000;
+}
+
+.pop
+{
+	background: #2c3e50;
+	color: #fff;
+	transform: rotate(45deg);
+	padding: 7px 40px;
+	position: absolute;
+	top:16px;
+	right: -40px;
+}
+
+@media screen and (max-width: 980px)
+{
+	.col{flex: 50%;}
+}
 @media screen and (max-width:700px)
 {
 	.col{flax: 100%}
 }
 .estiloTablaEncabezados
 {
-	  margin: 0 0 1em 0;
-		width: 100%;
-   text-align: left;
-   vertical-align: top;
+	margin: 0 0 1em 0;
+	width: 100%;
+	text-align: left;
+	vertical-align: top;
     border: 1;
 	
 }
 .divimagen{
- height: 10px;
+	height: 10px;
+	margin-left: 33px;
 }
 
 .estiloTabla
 {
 	
-   text-align: center;
-	 width: 20%;
-   border: 1px solid #000;
+	text-align: center;
+	width: 20%;
+	border: 1px solid #000;
 	
 	
 	
 }
 .quantity {
-  position: relative;
+	position: relative;
 }
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button
 {
-  -webkit-appearance: none;
-  margin: 0;
+	-webkit-appearance: none;
+	margin: 0;
 }
 
 input[type=number]
 {
-  -moz-appearance: textfield;
+	-moz-appearance: textfield;
 }
 
 .quantity input {
-  width: 45px;
-  height: 42px;
-  line-height: 1.65;
-  float: left;
-  display: block;
-  padding: 0;
-  margin: 0;
-  padding-left: 20px;
-  border: 1px solid #eee;
+	width: 45px;
+	height: 42px;
+	line-height: 1.65;
+	float: left;
+	display: block;
+	padding: 0;
+	margin: 0;
+	padding-left: 20px;
+	border: 1px solid #eee;
 }
 
 .quantity input:focus {
-  outline: 0;
+	outline: 0;
 }
 
 .quantity-nav {
-  float: left;
-  position: relative;
-  height: 42px;
+	float: left;
+	position: relative;
+	height: 42px;
 }
 
 .quantity-button {
-  position: relative;
-  cursor: pointer;
-  border-left: 1px solid #eee;
-  width: 20px;
-  text-align: center;
-  color: #333;
-  font-size: 13px;
-  font-family: "Trebuchet MS", Helvetica, sans-serif !important;
-  line-height: 1.7;
-  -webkit-transform: translateX(-100%);
-  transform: translateX(-100%);
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
+	position: relative;
+	cursor: pointer;
+	border-left: 1px solid #eee;
+	width: 20px;
+	text-align: center;
+	color: #333;
+	font-size: 13px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif !important;
+	line-height: 1.7;
+	-webkit-transform: translateX(-100%);
+	transform: translateX(-100%);
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
 }
 
 .quantity-button.quantity-up {
-  position: absolute;
-  height: 50%;
-  top: 0;
-  border-bottom: 1px solid #eee;
+	position: absolute;
+	height: 50%;
+	top: 0;
+	border-bottom: 1px solid #eee;
 }
 
 .quantity-button.quantity-down {
-  position: absolute;
-  bottom: -1px;
-  height: 50%;
+	position: absolute;
+	bottom: -1px;
+	height: 50%;
 }
 
 .field{
-  width:50px;
-  display: inline-block;
+	width:50px;
+	display: inline-block;
 }
 
+/*ESTILO TARJETA CREDITO*/
+.credit-card-div  span { padding-top:10px; }
+.credit-card-div img { padding-top:30px; }
+.credit-card-div .small-font { font-size:9px; }
+.credit-card-div .pad-adjust { padding-top:10px; }
 
+.img-rounded
+{    position: absolute;
+	width: 60%;
+	margin-top: 8px;
+}
 
