@@ -183,6 +183,12 @@ iframe {
 	border: none !important;
 }
 
+/*#search {
+	display:block !important;
+	width:70% !important;
+	border: 1px !important;
+}*/
+
 
 /*//////////////////////////////////////////////////////////////////
 [ Utility ]*/
@@ -2328,7 +2334,7 @@ div.divImgCarrusel
 	
 }
 
-.col
+.coll
 {
 	
 	flex: 25%;
@@ -2521,4 +2527,154 @@ input[type=number]
 	width: 60%;
 	margin-top: 8px;
 }
+
+#box_search 
+{
+	display:block !important;
+	float:left !important;
+	border:10px !important;
+}
+#rangeFilterCount 
+{display:block !important;}
+#clearRangeFilter 
+{display:block !important;}
+
+#divfiltros
+{
+	/*display:block !important;*/
+	float: right !important;
+	position:right !important;
+}
+
+#btnGuardar
+{   background-color: #88c9c4 !important;
+	color:#323232;
+	position:right;
+	margin-left: 23%;
+	
+}
+#btnCancel
+{   background-color: #88c9c4 !important;
+	color:#323232;
+	margin-left: 10px
+}
+
+.body{background:#e6e5e4;
+	  /* display: flex;*/
+   /* align-items: center;*/
+    /*justify-content: center;
+	
+    flex-direction: column;
+	
+   /* min-height: 100vh;*/
+	
+	}
+
+
+
+
+
+#datosPerfil
+{text-align:left-side;}
+
+#Perfil
+{text-align:center;
+	font-size: 5em; }
+
+/*estilo titulo perfil*/
+
+	.bg-1{
+   background:linear-gradient(to right, rgb(97, 67, 133), rgb(81, 99, 149));
+   height: 43vh;
+   padding-top: 150px;
+}
+
+.t-stroke {
+
+  color: transparent;
+  -text-stroke-width: 1px;
+  -webkit-text-stroke-width: 1px;
+  -text-stroke-color: #000000;
+  -webkit-text-stroke-color: #ffffff;
+
+}
+
+.t-shadow
+{
+  text-shadow: 9px 9px #e86667;
+}
+
+.inputEmail3
+{
+	/*width: 80%;*/
+}
+
+#linkimg
+{  
+	display:block !important;
+	/*margin-top: 292px;*/
+	margin-left:-10%;
+	
+  display: flex;
+  flex-direction: column;
+}
+
+
+.tablaPerfil{margin:0 0 0 0;}
+
+/*DIV CON FOTO*/
+#FotoInseted{	/*transform: rotate(-45deg);*/
+	/*transform: rotate(-45deg);*/
+	
+		margin-top: 17.5% !important;
+		margin-left: 2%;
+		margin-right: 2%;
+	 display: flex;
+  flex-direction: column;
+  float: left;
+  
+  
+		}
+		
+	/*DIV ROSADO*/	
+		#fotoPerfil
+{
+	background: #e86765;
+	transform: rotate(45deg);
+	margin-left:3.5%;
+	width: 21vw;
+	height: 21vw;
+	
+	
+}
+#fotoPerfil :hover
+{
+
+-webkit-transform: rotate(360deg);transform: rotate(360deg);
+	
+	border-radius:50%;
+-webkit-border-radius:50%;
+/*box-shadow: 0px 0px 15px 15px #000000;*/
+-webkit-box-shadow: 10px -1px 15px 15px #e6e5e4;
+transform: rotate(360deg);
+-webkit-transform: rotate(360deg);
+
+}
+		
+/*#FotoInseted:hover
+{
+	/*background: #e86765;*/
+	/*transform: rotate(0deg);*/
+	
+	/*width: 16vw !important;
+	height: 16vw !important;
+	
+}*/
+
+
+
+/*#box_search{left:100 !important;}*/
+/*div {border: solid !important;}
+
+
 
