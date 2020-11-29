@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
+<html lang="en">
+	
+	<head>
+		<meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<title>eMercado - Todo lo que busques está aquí</title>
+		<link rel="icon" type="image/png" href="img/icons/favicon.ico"/>
+		<link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+		<link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+		<link href="css/font-awesome.min.css" rel="stylesheet">
+		
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		
+		<link href="css/styles.css" rel="stylesheet">
+		<link href="css/dropzone.css" rel="stylesheet">
+		<script src="js/userName.js"></script>
+		<script src="js/my-profile.js"></script>
+	</head>
+	
+	<body class="body" onload="myFunction()">
+		
+		
+		<nav class="site-header sticky-top py-1 bg-dark">
+			<div class="container d-flex flex-column flex-md-row justify-content-between">
+				<a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
+				<a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
+				<a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
+				<a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
+				<!-- <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+				<a class="py-2 d-none d-md-inline-block" href="cart.html">Mi Perfil</a>-->
+				<div class="dropdown">
+					<button id="DPWperfil" class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false">
+						<div class="py-2 d-none d-md-inline-block" id="user" style="color: #d18d8c">  </div>
+						
+					</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a  class="py-2 d-none d-md-inline-block dropdown-item"  href="cart.html">Ver mi carrito</a>
+						<a class="py-2 d-none d-md-inline-block dropdown-item" href="my-profile.html">Mi perfil</a>
+						<a class="py-2 d-none d-md-inline-block dropdown-item" href="index.html">Cerrar sesión</a>
+					</div>
+					
+				</div>
+			</div>
+		</nav>
+		
+		
+		<div class="container">
+			
+			
+			<div class="bg-1">
+				<h1 class="t-stroke t-shadow" id="Perfil">Perfil</h1>
+			</div>
+			<table style="width:100%">
+				<tr>
+					<th>
+						<div class="row">
+							<!-- FOTO DE PERFIL-->
+							<br>
+							<div class="col-md3 well login100-pic js-tilt" data-tilt id="fotoPerfil">
+								<!--<img src=""id="variablefoto" alt="">-->
+								
+							<div id="FotoInseted">
+							</div>
+							</div>
+						</div>
+						
+						<br>
+						
+			
+						<div class="row" id="linkimg">
+						
+							<form name="f5" onsubmit="return validatePerfil();">	
+								<div class="form-group input-group col-md-11 well" >
+									<label class="sr-only" for="exampleInputEmail3">Link img</label>
+									<input type="text" class="form-control"  placeholder="Link" name="nameLink" id="idLink">
+										<button><i class="far fa-save"></i></button>
+									
+								</div>
+							</form>
+							
+						</div>
+						<div class="row">
+							<a href="https://imgbb.com/upload" target="_blank">Click para cargar foto</a>
+						</div>
+					</th>
+					<th class="tablaPerfil">
+						<!-- DATOS DE PERFIL -->
+						
+						<div class="col-md-9 well">
+							<br>
+							<br>
+							<h3 id="datosPerfil">Datos</h3>
+							
+							<form class="form-inline" name="f2" onsubmit="return validatePerfil();">
+								<div class="form-group">
+									<label class="sr-only" for="exampleInputEmail3">Primer Nombre</label>
+									<input type="text" class="form-control" id="userPerfil_priNom" placeholder="Primer Nombre" name="first_name"> 
+								</div> 
+								
+								
+								
+								<div class="form-group input-group">
+									<label class="sr-only" for="exampleInputEmail3">Segundo Nombre</label>
+									<input type="text" class="form-control" id="userPerfil_segNom" placeholder="Segundo Nombre" name="second_name">
+								
+									<button id="pruebba" onclick=" validatePerfil()"> <i class="far fa-save"></i></button>
+								</div>
+								
+							</form>
+							<br>
+							
+							<form class="form-inline" name="f3" onsubmit="return validatePerfil();">
+								<div class="form-group">
+									<label class="sr-only" for="exampleInputPassword3">Primer Apellido</label>
+									<input type="text" class="form-control" id="userPerfil_priAp" placeholder="Primer Apellido" name="first_lastName">
+								</div>
+								<div class="form-group input-group">
+									<label class="sr-only" for="exampleInputPassword3">Segundo Apellido</label>
+									<input type="text" class="form-control" id="userPerfil_segAp" placeholder="Segundo Apellido" name="second_lastName">
+							
+									<button><i class="far fa-save"></i></button>
+								</div>
+								
+							</form>
+							<br>
+							<form class="form-inline" name="f4" onsubmit="return validatePerfil();">
+								<div class="form-group inputEmail3 input-group">
+									<label class="sr-only" for="exampleInputPassword3">Edad</label>
+									<input type="number" class="form-control" id="idEdad" placeholder="Edad" name="nameEdad">
+									
+								</div>
+								
+								<div class="form-group inputEmail3 input-group">
+									<label class="sr-only" for="exampleInputPassword3">Telefono</label>
+									<input type="number" class="form-control" id="Telefono" placeholder="Telefono" name="nameTelefono">
+								
+									<button><i class="far fa-save"></i></button>
+								</div>
+							</form>	
+							
+							
+							
+							<br>
+							<form class="form-inline" name="f1" onsubmit="return validatePerfil();">
+								<div class="form-group inputEmail3 input-group">
+									<label class="sr-only" for="exampleInputPassword3">Email</label>
+									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+									<input type="text"  class="form-control" id="user14" onclick="validate()" name="email2"  readonly="readonly">
+									
+								
+								</div>
+							</form>
+							
+							
+							
+							<br>
+							<br>
+							<br>
+							<!--<div class="row">
+								<button type="button" class="btn btn-primary" disabled="disabled" id="btnGuardar" type="submit">Guardar Cambios</button>
+								<button type="button" class="btn btn-default" disabled="disabled"  id="btnCancel" >Cancelar</button>
+							</div>-->
+							
+							
+						</div>
+						<th>
+						</tr>
+					</table>
+				</div>
+				<br>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<div class="alert fade alert-success" role="alert" id="alertResult">
+					<span id="resultSpan"></span>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div id="spinner-wrapper">
+					<div class="lds-ring">
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+				<script src="js/jquery-3.4.1.min.js"></script>
+				<script src="js/bootstrap.bundle.min.js"></script>
+				<script src="js/dropzone.js"></script>
+				<script src="js/init.js"></script>
+				<script src="js/my-profile.js"></script>
+			</body>
+			
+		</html>					
