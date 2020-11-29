@@ -1,0 +1,49 @@
+
+body
+{
+	margin: 0;
+	padding: 0;
+	font-family: "montserrat", sans-serif;
+	min-height: 100vh;
+	background-color:#fcfbfa;
+	/*background-image: linear-gradient(125deg,#6a89cc,#b8c994)*/
+}
+.container
+{
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	color: #343434
+}
+.container h1
+{
+	font-size: 160px;
+	margin:0;
+	font-weight:900;
+	letter-spacing: 20px;
+	background: url(../img/92916154-fondo-de-arte-abstracto-pintura-digital-textura-de-color-arte-moderno-arte-contemporáneo-lienzo-de-col.jpg) center no-repeat;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+}
+.container a
+{
+	text-decoration: none;
+	background: #e55039aa;
+	color: #fff;
+	padding: 12px 24px; /*alto y ancho del boton*/
+	display: inline-block;
+	border-radius: 25px;
+	font-size: 14px;
+	text-transfore: uppercase;
+	transmition: 0.4s;
+}
+.container a:hover
+{
+	background: #e55039;	
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
+
+<html lang="en">
+	
+	<head>
+		<meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<title>eMercado - Todo lo que busques está aquí</title>
+		
+		
+		
+		<!--<style type="text/css" media="all">@import "https://asset-cdn.schoology.com/assets/css/theme_bundle_995a1ca4c022a1fcc9f4bd84130c5798.css";</style>-->
+		
+		
+		<link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+		<link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+		<link href="../css/font-awesome.min.css" rel="stylesheet">
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/styles.css" rel="stylesheet">
+		<link rel="icon" type="image/png" href="../img/icons/favicon.ico"/>
+		<!-- Libreria de iconos -estrellas- -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="../js/userName.js"></script>
+		
+		
+	</head>
+	
+	<body onload="myFunction()" >
+		<nav class="site-header sticky-top py-1 bg-dark">
+			<div class="container d-flex flex-column flex-md-row justify-content-between">
+				<a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
+				<a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
+				<a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
+				<a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
+				<!-- <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+				<a class="py-2 d-none d-md-inline-block" href="cart.html">Mi Perfil</a>-->
+				
+				<div class="dropdown">
+					<button id="DPWperfil" class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false">
+						<div class="py-2 d-none d-md-inline-block" id="user" style="color: yellow">  </div>
+						
+					</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a  class="py-2 d-none d-md-inline-block dropdown-item"  href="cart.html">Ver mi carrito</a>
+						<a class="py-2 d-none d-md-inline-block dropdown-item" href="my-profile.html">Mi perfil</a>
+						<a class="py-2 d-none d-md-inline-block dropdown-item" href="index.html">Cerrar sesión</a>
+					</div>
+					
+				</div>
+				
+			</div>
+		</nav>
+		<main role="main">
+			<div class="container mt-5">
+				<div class="text-center p-4">
+					<h2>Descripción del producto</h2>
+					<p class="lead">Encontrarás aquí toda la información del producto seleccionado.</p>
+					<p class="small alert-warning py-3"><strong>Nota: </strong>por simplicidad, cualquiera sea el producto
+					seleccionado previamente, siempre se visualizará la presente: <strong>Chevrolet Onix Joy</strong>.</p>
+				</div>
+				<h3 id="categoryName" class="categoryName"></h3>
+				<hr class="my-3">
+				
+				
+				<div class="estilopag">
+				<dl>
+				<table>
+				<td class="estilohtml">
+					<dt>Categoría</dt>
+					<dd>
+						<p id="productCriteria"></p>
+					</dd>
+					
+					<dt>Precio:</dt>
+					<dd>
+						<p id="productP" ></p>
+					</dd>
+					
+					<dt>Cantidad vendidos</dt>
+					<dd>
+						<p id="productCount"></p>
+					</dd>
+					
+					<dt>Descripción</dt>
+					<dd>
+						<p id="categoryDescription"></p>
+					</dd>
+				
+				</td>
+				
+				
+				<td>
+				<div class="divImgCarrusel">
+					<dt>Imágenes ilustrativas</dt>
+					<dd>
+						<div class="row text-center text-lg-left pt-2" id="productImagesGallery">
+						</div>
+					</dd>
+					</div>
+				</td>
+					</table>
+				</dl>
+				</div>
+				<!--    <a type="button" class="btn btn-light btn-lg btn-block" href="products.html">Ver productos</a> -->
+				<br>
+				<hr>
+				<br>
+				
+				<dl>
+					
+					<dt>Productos relacionados</dt>
+					<dd>
+						<p id="relacionados"></p>
+					</dd>
+				</dl>
+				<!-- AGREGAR LA PARTE DOS DE LA PAUTA 1 -MOSTRAR RELACIONADOS -->
+				
+				<br>
+				<hr>
+				<br>
+				<div>
+					<div class="d-block mb-4 h-100"><!--CUADRO VISUAL PARA INSERTAR COMENTARIO-->
+						<!--para el cuadro de texto -id1 email-->
+						
+						<div class="hide-label">
+							<div class="form-item " id="edit-comment-9-wrapper">
+								<label  ></label>
+								<textarea cols="65" id="id1" placeholder="Escriba un comentario"></textarea>
+							</div>
+						</div>
+						<br>
+						<p><h6>Calificación:  
+							
+							<select name="select" id="idselect">>
+								<option value="value1"selected>1</option> 
+								<option value="value2">2</option>
+								<option value="value3">3</option>
+								<option value="value4">4</option>
+								<option value="value5">5</option>
+								
+							</select></h6></p>
+							
+							<!--para el boton de publicar -onclick="alertas()"-->
+							<div class="submit-span-wrapper"  onclick="alertas()" ID="newButton" name="prod"  >
+								<span  >
+									<input calss="botnPublicar" type="button" value="Publicar"/>
+								</span>
+								<br>
+							</div>
+							
+					</div>
+					<br>
+					<div id="usuarioComment" > </div>
+					<div id="usuarioCommentEmail"> </div>
+					<div id="usuarioCommentTime"> </div>					
+					<div id="usuarioEstrella" > </div>
+					<div id="idscoreestrComm"></div>
+					
+				
+				<div class="comentariosjson" id="idscore" >	
+				
+				
+				<div id="usuarioSelect"> </div>
+				<br>
+				<div id="comentarioAgregado">  </div>
+				<div id="score" >  </div>
+				<div id="description"></div>
+				<div id="user5"></div>
+				<div id="dateTime"></div>
+				
+				</div>	
+				
+				</div>
+				<br>
+				<hr>
+				<br>
+				</main>
+				
+				<footer class="text-muted">
+				<div class="container">
+				<p class="float-right">
+				<a href="#">Volver arriba</a>
+				</p>
+				<p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
+				
+				</div>
+				</footer>
+				<div id="spinner-wrapper">
+				<div class="lds-ring">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				</div>
+				</div>
+				<script src="../js/jquery-3.4.1.min.js"></script>
+				<script src="../js/bootstrap.bundle.min.js"></script>
+				<script src="../js/init.js"></script>
+				<script src="../js/product-info.js"></script>
+				
+				</body>
+				
+				</html>																										
